@@ -11,31 +11,46 @@ public class Main {
 
     public static void task1(){
         System.out.println("Task 1");
+        int iOs = 0;
+        int android = 1;
+
         int clientOS = 0;
 
-        if (clientOS == 0) {
+        if (clientOS == iOs) {
             System.out.println("Install iOS");
-        } else {
+        }
+        if (clientOS == android) {
             System.out.println("Install Android");
+        }
+        if (clientOS != iOs && clientOS != android) {
+            System.out.println("Seems that you have Windows. Pls install windows application");
         }
     }
 
     public static void task2() {
         System.out.println("Task 2");
+        int iOs = 0;
+        int android = 1;
+        int lightOSYear = 2015;
+
         int clientOS = 0;
         int clientDeviceYear = 2013;
 
-        if ( clientDeviceYear < 2015) {
-            if (clientOS == 0) {
+        if ( clientDeviceYear < lightOSYear) {
+            if (clientOS == iOs) {
                 System.out.println("Install light iOS");
-            } else {
+            } else if (clientOS == android) {
                 System.out.println("Install light Android");
+            } else {
+                System.out.println("Install Windows 95");
             }
         } else {
-            if (clientOS == 0) {
+            if (clientOS == iOs) {
                 System.out.println("Install iOS");
-            } else {
+            } else if (clientOS == android) {
                 System.out.println("Install Android");
+            } else {
+                System.out.println("Install Windows 10");
             }
         }
     }
